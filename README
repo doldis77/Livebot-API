@@ -1,0 +1,32 @@
+Livebot.eu API
+Version 1.0 beta
+
+(c) 2012, Robin "doldis" Linderoth.
+http://www.doldis.se, http://www.livebot.eu
+
+
+
+
+PHP Example
+
+
+require_once("livebot.api.class.php");
+$lb = new LiveBot_API();
+
+$lb->api_key = 'YOUR ASSIGNED API-KEY';
+
+
+
+Adding a new server
+
+$lb->checkAddServer(serverip, serverport, returnid (true or false));
+// returns ID if supplied.., returns ERRORS aswell.
+
+
+
+Viewing Live Content from server
+
+$lb->css_url = 'URL TO YOUR OWN CSS FILE';
+$lb->loadLiveContent(serverid);
+
+
